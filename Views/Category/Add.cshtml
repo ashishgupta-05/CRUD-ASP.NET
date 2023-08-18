@@ -1,0 +1,21 @@
+﻿@model MachineTestAssignment2.Models.Category;
+
+@{
+}
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1> Add New Tag - Admin functionality</h1>
+    </div>
+</div>
+<div class="container py-5">
+    @Html.Raw(ViewBag.Message)
+</div>
+<div class="container py-5">
+    <form asp-controller="Category" asp-action="Add" method="post">
+        <label for="name">Category Name:</label>
+        <input type="text" id="name" name="Name" asp-for="Name" />
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
